@@ -1,0 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   2022-11-28 찬민 수정
+*/
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+address,
+em,
+img,
+strong,
+center,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+section,
+time,
+audio {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+ol,
+ul {
+  list-style: none;
+}
