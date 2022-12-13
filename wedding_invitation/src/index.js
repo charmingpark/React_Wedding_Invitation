@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+window.Kakao.init(`${process.env.REACT_APP_KAKAO_KEY}`);
+
 root.render(
   <React.StrictMode>
     <App />

@@ -22,5 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-임시.html
-임시 copy.html
+copy.html
+copy.js
+copy.txt
+
+.env

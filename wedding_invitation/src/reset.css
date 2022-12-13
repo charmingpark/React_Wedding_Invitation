@@ -55,3 +55,8 @@ ol,
 ul {
   list-style: none;
 }
+
+section{
+  border: 1px solid #000;
+  background: rgb(193, 193, 130);
+}
