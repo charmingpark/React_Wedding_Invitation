@@ -4,44 +4,44 @@
    2022-11-28 찬민 수정
 */
 
-html,
+a,
+address,
+article,
+aside,
+audio,
+blockquote,
 body,
+canvas,
+center,
 div,
-span,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-a,
-address,
-em,
+header,
+html,
 img,
-strong,
-center,
-ol,
-ul,
-li,
-fieldset,
-form,
 label,
 legend,
-article,
-aside,
-canvas,
-figure,
-figcaption,
-footer,
-header,
+li,
 menu,
 nav,
+ol,
 output,
+p,
 section,
+span,
+strong,
 time,
-audio {
+ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -56,7 +56,47 @@ ul {
   list-style: none;
 }
 
-section{
-  border: 1px solid #000;
-  background: rgb(193, 193, 130);
+/* cummon */
+.hanTit.ranTxt {
+  font-family: 'Eulyoo1945', serif;
+  font-size: 24px;
+}
+
+.top {
+  font-family: 'Eulyoo1945', serif;
+  font-size: 18px;
+  letter-spacing: 0.41em;
+  text-indent: 0.41em;
+  padding: 25% 15% 5%;
+}
+
+section:nth-child(n + 2) {
+  border: 1px solid #694a32;
+  background: #f1dae0;
+  border-radius: 50vw 50vw 0 0;
+}
+@supports (height: 100dvh) {
+  section {
+    height: 100dvh;
+  }
+}
+@supports not (height: 100dvh) {
+  section {
+    height: 100vh;
+  }
+}
+
+/* 지워야할 임시 CSS */
+header {
+  display: none;
+}
+
+#Skip_Nav,
+.QuickMenu,
+.popContainer {
+  display: none;
+}
+
+section:first-child {
+  background: pink;
 }

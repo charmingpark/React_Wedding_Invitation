@@ -6,6 +6,8 @@ import Wrap from './pages/Wrap';
 import PopGnb from './pages/PopGnb';
 import PopImg from './pages/PopImg';
 
+import './App.style.js';
+
 function App() {
   return (
     <div className="App">

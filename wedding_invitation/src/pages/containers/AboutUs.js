@@ -3,7 +3,7 @@ function AboutUs() {
     <section className="aboutUs atm" id="aboutUs">
       <div className="contactInner">
         <div className="secTitleWrap t1">
-          <h2 className="hanTit ranTxt">신랑신부 소개</h2>
+          <h2 className="hanTit ranTxt top">신랑신부 소개</h2>
           {/* material.UI 를 설치하고 탭패널로 만들기 */}
           <div className="ranBox family">
             <div className="box">

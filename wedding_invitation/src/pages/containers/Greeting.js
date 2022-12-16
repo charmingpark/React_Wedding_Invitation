@@ -2,7 +2,7 @@ function Greeting() {
   return (
     <section className="greetingWrap atm" id="greetingWrap">
       <div className="secTitleWrap">
-        <h2 className="hanTit ranTxt">인사말</h2>
+        <h2 className="hanTit ranTxt top">인사말</h2>
         <p className="mt">소중한 분들을 초대합니다.</p>
       </div>
       <div className="greetingBox">

@@ -3,7 +3,7 @@ function WeddingDay() {
     <section className="weddingDay atm" id="weddingDay">
       <div className="dayInner">
         <div className="secTitleWrap">
-          <h2 className="hanTit ranTxt">초대합니다</h2>
+          <h2 className="hanTit ranTxt top">초대합니다</h2>
         </div>
         <div className="dayBox">
           {/* mt, mt2는 transition-delay 속성과 연관됨.(800) */}

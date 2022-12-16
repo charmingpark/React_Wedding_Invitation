@@ -3,7 +3,7 @@ function Gallery() {
     <section className="galleryWrap atm" id="galleryWrap">
       <div className="galleryInner">
         <div className="secTitleWrap t1">
-          <h2 className="hanTit ranTxt mt">갤러리</h2>
+          <h2 className="hanTit ranTxt top mt">갤러리</h2>
         </div>
         {/* <!-- galWrap --> */}
         <div className="galWrap mt">

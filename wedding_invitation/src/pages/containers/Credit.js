@@ -2,7 +2,7 @@ function Credit() {
   return (
     <section className="creditWrap" id="creditWrap">
       <div className="thanksInner">
-        <h2 className="hanTit ranTxt">감사인사</h2>
+        <h2 className="hanTit ranTxt top">감사인사</h2>
         <p className="mt">
           {/* style="white-space: pre-line;" */}
           끝까지 노력해 청첩장 사이트를 함께 만든 친구들과 언제나 곁을 따뜻하게

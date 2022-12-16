@@ -3,7 +3,7 @@ function PopImg() {
     console.log(`something2`);
   };
   return (
-    <div className="PopImg">
+    <div className="PopImg popContainer">
       <div className="in">
         <div className="imageContainer">
           <img src="" alt="" className="zoomImg" />

@@ -4,7 +4,7 @@ function PopGnb() {
   };
 
   return (
-    <div className="PopGnb">
+    <div className="PopGnb popContainer">
       {/* <!-- PopGnb - header에 붙은 전체화면 팝메뉴(Global Nav Bar) --> */}
       <div className="inner">
         {/* <!-- gnbList --> */}

@@ -5,17 +5,20 @@ import WeddingDay from './containers/WeddingDay.js';
 import Gallery from './containers/Gallery.js';
 import Location from './containers/Location.js';
 import Credit from './containers/Credit.js';
+import { ContainerStyle } from './Container.style.js';
 
 function Container() {
   return (
     <div id="Container">
-      <MainVisual />
-      <Greeting />
-      <AboutUs />
-      <WeddingDay />
-      <Gallery />
-      <Location />
-      <Credit />
+      <ContainerStyle>
+        <MainVisual />
+        <Greeting />
+        <AboutUs />
+        <WeddingDay />
+        <Gallery />
+        <Location />
+        <Credit />
+      </ContainerStyle>
     </div>
   );
 }
