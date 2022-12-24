@@ -6,21 +6,23 @@ export const MainVisualStyle = styled.div`
   /* 둥근 테두리 */
   .titleWrap {
     width: 80%;
+    max-width: 800px;
     height: 95%;
-    right: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 0;
     border: 2px solid #694a32;
     border-style: double double none;
     position: absolute;
     border-radius: 230px 230px 0 0;
-    margin: 0 auto;
   }
 
-  section:first-child:before {
+  .visualBox:before {
     content: '';
     position: absolute;
     z-index: 1;
-    bottom: -25px;
+    bottom: -26px;
     left: 0;
     background: url(${scroll_bg}) no-repeat center;
     width: 100%;
@@ -39,8 +41,7 @@ export const MainVisualStyle = styled.div`
   }
 
   .name {
-    font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: #694a32;
   }
   .and {
@@ -48,9 +49,9 @@ export const MainVisualStyle = styled.div`
     color: #888;
   }
   .date {
-    font-size: 55px;
+    font-size: 4em;
     font-family: 'Martel';
-    line-height: 70px;
+    line-height: 1em;
     color: #694a32;
   }
 

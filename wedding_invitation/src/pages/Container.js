@@ -9,8 +9,8 @@ import { ContainerStyle } from './Container.style.js';
 
 function Container() {
   return (
-    <div id="Container">
-      <ContainerStyle>
+    <ContainerStyle>
+      <div id="Container">
         <MainVisual />
         <Greeting />
         <AboutUs />
@@ -18,8 +18,8 @@ function Container() {
         <Gallery />
         <Location />
         <Credit />
-      </ContainerStyle>
-    </div>
+      </div>
+    </ContainerStyle>
   );
 }
 

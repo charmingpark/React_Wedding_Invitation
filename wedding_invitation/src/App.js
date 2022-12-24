@@ -1,21 +1,20 @@
-import './reset.css';
-
-import './App.css';
 import SkipNav from './components/SkipNav';
 import Wrap from './pages/Wrap';
 import PopGnb from './pages/PopGnb';
 import PopImg from './pages/PopImg';
 
-import './App.style.js';
+import { AppStyle } from './App.style.js';
 
 function App() {
   return (
-    <div className="App">
-      <SkipNav />
-      <Wrap />
-      <PopGnb />
-      <PopImg />
-    </div>
+    <AppStyle>
+      <div className="App">
+        <SkipNav />
+        <Wrap />
+        <PopGnb />
+        <PopImg />
+      </div>
+    </AppStyle>
   );
 }
 

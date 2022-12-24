@@ -44,12 +44,6 @@ function Location() {
                   </a>
                 </li>
                 <li>
-                  <a href="http://naver.me/GOOSYb2Q" className="kakaonavi">
-                    {/* 수정바람 */}
-                    카카오네비
-                  </a>
-                </li>
-                <li>
                   <a href="http://naver.me/GOOSYb2Q" className="navermap">
                     네이버지도
                   </a>

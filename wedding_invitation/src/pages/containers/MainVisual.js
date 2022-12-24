@@ -3,8 +3,8 @@ import { MainVisualStyle } from './MainVisual.style.js';
 function MainVisual() {
   const date = ['23', '02', '18'];
   return (
-    <MainVisualStyle>
-      <section className="mainVisual" id="mainVisual">
+    <section className="mainVisual" id="mainVisual">
+      <MainVisualStyle>
         {/* <!-- visualBox --> */}
         <div className="visualBox">
           <div className="imgBox">
@@ -43,8 +43,8 @@ function MainVisual() {
           </div>
         </div>
         {/* <!-- //visualBox --> */}
-      </section>
-    </MainVisualStyle>
+      </MainVisualStyle>
+    </section>
   );
 }
 

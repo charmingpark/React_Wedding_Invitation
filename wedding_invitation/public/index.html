@@ -9,8 +9,19 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link
+    <!-- <link
       href="https://webfontworld.github.io/HSBomBaram/HSBomBaram2.css"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link
+      href="https://webfontworld.github.io/amore/AritaBuri.css"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,6 +51,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      div#root {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      @media not (max-width: 800px) {
+        body {
+          font-size: 150%;
+        }
+        section {
+          border-radius: 50vw 50vw 50vw 50vw !important;
+        }
+      }
+      html {
+        scroll-snap-type: y mandatory;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
