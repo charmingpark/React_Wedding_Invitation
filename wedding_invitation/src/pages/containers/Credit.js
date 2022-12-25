@@ -1,6 +1,11 @@
-function Credit() {
+import { forwardRef } from 'react';
+const Credit = forwardRef((props, ref) => {
   return (
-    <section className="creditWrap" id="creditWrap">
+    <section
+      className="creditWrap"
+      id="creditWrap"
+      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+    >
       <div className="thanksInner secTitleWrap">
         <h2 className="hanTit ranTxt top">감사인사</h2>
         <p>모두에게 감사합니다.</p>
@@ -28,6 +33,8 @@ function Credit() {
       </div>
     </section>
   );
-}
+}); //함수 닫는 괄호 잊지 마세요!
+
+Credit.displayName = 'Credit';
 
 export default Credit;

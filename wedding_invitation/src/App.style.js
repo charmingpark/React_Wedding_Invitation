@@ -85,6 +85,11 @@ export const AppStyle = styled.div`
   section:nth-child(n + 2) {
     background: #f1dae0;
     border-radius: 50vw 50vw 0 0;
+    transition: border-radius 1s;
+  }
+
+  section.focus {
+    border-radius: 0;
   }
 
   @supports (height: 100dvh) {

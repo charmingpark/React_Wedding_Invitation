@@ -3,10 +3,11 @@ import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import TabUnstyled from '@mui/base/TabUnstyled';
 import { AboutUsStyle } from './AboutUs.style.js';
+import { forwardRef } from 'react';
 
-function AboutUs() {
+const AboutUs = forwardRef((props, ref) => {
   return (
-    <section className="aboutUs atm" id="aboutUs">
+    <section className="aboutUs atm" id="aboutUs"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
       <AboutUsStyle>
         <div className="contactInner">
           <h2 className="hanTit ranTxt top">신랑신부 소개</h2>
@@ -96,6 +97,8 @@ function AboutUs() {
       </AboutUsStyle>
     </section>
   );
-}
+});  //함수 닫는 괄호 잊지 마세요!
+
+AboutUs.displayName = 'AboutUs';
 
 export default AboutUs;

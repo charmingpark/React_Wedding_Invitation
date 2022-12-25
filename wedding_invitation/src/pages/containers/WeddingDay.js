@@ -1,9 +1,10 @@
 import DDay from '../../components/DDay.js';
 import Calendar from '../../components/Calendar.js';
+import { forwardRef } from 'react';
 
-function WeddingDay() {
+const WeddingDay = forwardRef((props, ref) => {
   return (
-    <section className="weddingDay atm" id="weddingDay">
+    <section className="weddingDay atm" id="weddingDay"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
       <div className="dayInner">
         <div className="secTitleWrap">
           <h2 className="hanTit ranTxt top">초대합니다</h2>
@@ -31,6 +32,8 @@ function WeddingDay() {
       </div>
     </section>
   );
-}
+});  //함수 닫는 괄호 잊지 마세요!
+
+WeddingDay.displayName = 'WeddingDay';
 
 export default WeddingDay;

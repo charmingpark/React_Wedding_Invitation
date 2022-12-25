@@ -1,6 +1,7 @@
 import ImageSlider from '../../components/ImageSlider.js';
+import { forwardRef } from 'react';
 
-function Gallery() {
+const Gallery = forwardRef((props, ref) => {
   const images = [
     'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
     'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
@@ -8,7 +9,7 @@ function Gallery() {
   ];
 
   return (
-    <section className="galleryWrap atm" id="galleryWrap">
+    <section className="galleryWrap atm" id="galleryWrap"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
       <div className="galleryInner">
         <div className="secTitleWrap t1">
           <h2 className="hanTit ranTxt top mt">갤러리</h2>
@@ -23,6 +24,8 @@ function Gallery() {
       </div>
     </section>
   );
-}
+});  //함수 닫는 괄호 잊지 마세요!
+
+Gallery.displayName = 'Gallery';
 
 export default Gallery;
