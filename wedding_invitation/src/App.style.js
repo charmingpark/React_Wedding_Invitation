@@ -145,7 +145,7 @@ export const AppStyle = styled.div`
   }
   section:last-child {
     background: url(${flowerBg}) no-repeat bottom/cover;
-    .top{
+    .top {
       color: #9f587d !important;
     }
     color: #222 !important;

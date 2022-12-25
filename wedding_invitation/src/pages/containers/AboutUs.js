@@ -1,3 +1,7 @@
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabsListUnstyled from '@mui/base/TabsListUnstyled';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+import TabUnstyled from '@mui/base/TabUnstyled';
 import { AboutUsStyle } from './AboutUs.style.js';
 
 function AboutUs() {
@@ -14,13 +18,21 @@ function AboutUs() {
                 <br />
                 축하의 마음을 전달해보세요.
               </p>
-              <div className="photo">
-                <div className="groom"></div>
-                <div className="bride"></div>
-              </div>
               {/* <img src={groomNBride} alt="" /> */}
             </div>
             {/* table 태그로 구현하기 */}
+            <TabsUnstyled defaultValue={0}>
+              <TabsListUnstyled className="photo">
+                <TabUnstyled>
+                  <div className="groom"></div>
+                </TabUnstyled>
+                <TabUnstyled>
+                  <div className="bride"></div>
+                </TabUnstyled>
+              </TabsListUnstyled>
+              <TabPanelUnstyled value={0}>First page</TabPanelUnstyled>
+              <TabPanelUnstyled value={1}>Second page</TabPanelUnstyled>
+            </TabsUnstyled>
             <em>김의홍 · 한옥화</em>의 장남
             <strong>김동진</strong>
             {/* ::after image-background로 전화버튼 삽입 */}

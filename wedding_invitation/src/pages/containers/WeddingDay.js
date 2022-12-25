@@ -1,3 +1,6 @@
+import DDay from '../../components/DDay.js';
+import Calendar from '../../components/Calendar.js';
+
 function WeddingDay() {
   return (
     <section className="weddingDay atm" id="weddingDay">
@@ -16,11 +19,13 @@ function WeddingDay() {
         <div className="mt2">
           <span className="place">양재 영일교회 본당</span>
           <div className="calender">
-            {/* react-calender 사용 2월 18일 표기 */}
+            <Calendar month={1} year={2023} />
+            <DDay eventDate="2023-02-18 12:00:00" />
           </div>
         </div>
         <div>
           <p>결혼식 시작까지</p>
+
           {/* count-it-down 사용 2월 18일 오후 12시 30분 표기*/}
         </div>
       </div>

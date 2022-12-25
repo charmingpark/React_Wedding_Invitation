@@ -75,6 +75,70 @@
       html {
         scroll-snap-type: y mandatory;
       }
+
+      .galleryModal {
+        width: 80vw;
+        height: 500px;
+      }
+      .image-slider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 300px;
+      }
+
+      .image-slider__main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .image-slider__main img {
+        width: 100%;
+      }
+
+      .image-slider__previous,
+      .image-slider__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 100%;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      .image-slider__previous {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .image-slider__next {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .image-slider__thumbnails {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .image-slider__thumbnails img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .image-slider__thumbnails img.selected {
+        border: 2px solid blue;
+      }
     </style>
   </head>
   <body>
