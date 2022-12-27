@@ -4,10 +4,29 @@ import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import TabUnstyled from '@mui/base/TabUnstyled';
 import { AboutUsStyle } from './AboutUs.style.js';
 import { forwardRef } from 'react';
+import Clipboard from 'clipboard';
 
 const AboutUs = forwardRef((props, ref) => {
+  const clipboard = new Clipboard('.bankCopy');
+  clipboard.on('success', function (e) {
+    console.log('Action:', e.action);
+    console.log('Text:', e.text);
+    console.log('Trigger:', e.trigger);
+
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+
   return (
-    <section className="aboutUs atm" id="aboutUs"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
+    <section
+      className="aboutUs atm"
+      id="aboutUs"
+      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+    >
       <AboutUsStyle>
         <div className="contactInner">
           <h2 className="hanTit ranTxt top">신랑신부 소개</h2>
@@ -97,7 +116,7 @@ const AboutUs = forwardRef((props, ref) => {
       </AboutUsStyle>
     </section>
   );
-});  //함수 닫는 괄호 잊지 마세요!
+}); //함수 닫는 괄호 잊지 마세요!
 
 AboutUs.displayName = 'AboutUs';
 

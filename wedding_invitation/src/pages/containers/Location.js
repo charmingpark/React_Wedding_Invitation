@@ -2,7 +2,11 @@ import { forwardRef } from 'react';
 
 const Location = forwardRef((props, ref) => {
   return (
-    <section className="locationWrap atm" id="locationWrap"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
+    <section
+      className="locationWrap atm"
+      id="locationWrap"
+      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+    >
       <div className="locationInner">
         <div className="secTitleWrap t1">
           <h2 className="hanTit ranTxt top">오시는 길</h2>
@@ -611,7 +615,7 @@ const Location = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});  //함수 닫는 괄호 잊지 마세요!
+}); //함수 닫는 괄호 잊지 마세요!
 
 Location.displayName = 'Location';
 

@@ -9,7 +9,11 @@ const Gallery = forwardRef((props, ref) => {
   ];
 
   return (
-    <section className="galleryWrap atm" id="galleryWrap"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
+    <section
+      className="galleryWrap atm"
+      id="galleryWrap"
+      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+    >
       <div className="galleryInner">
         <div className="secTitleWrap t1">
           <h2 className="hanTit ranTxt top mt">갤러리</h2>
@@ -24,7 +28,7 @@ const Gallery = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});  //함수 닫는 괄호 잊지 마세요!
+}); //함수 닫는 괄호 잊지 마세요!
 
 Gallery.displayName = 'Gallery';
 

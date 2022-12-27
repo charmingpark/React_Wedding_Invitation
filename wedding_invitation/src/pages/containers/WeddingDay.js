@@ -4,7 +4,11 @@ import { forwardRef } from 'react';
 
 const WeddingDay = forwardRef((props, ref) => {
   return (
-    <section className="weddingDay atm" id="weddingDay"  ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}>
+    <section
+      className="weddingDay atm"
+      id="weddingDay"
+      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+    >
       <div className="dayInner">
         <div className="secTitleWrap">
           <h2 className="hanTit ranTxt top">초대합니다</h2>
@@ -32,7 +36,7 @@ const WeddingDay = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});  //함수 닫는 괄호 잊지 마세요!
+}); //함수 닫는 괄호 잊지 마세요!
 
 WeddingDay.displayName = 'WeddingDay';
 

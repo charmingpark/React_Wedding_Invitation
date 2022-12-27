@@ -144,6 +144,10 @@ export const AppStyle = styled.div`
     .top {
       color: #f1dae0;
     }
+    box-shadow: #f1dae0 0px -50dvh 0px;
+  }
+  section:nth-of-type(2n + 4) {
+    box-shadow: #334357 0px -50dvh 0px;
   }
   section:first-of-type {
     background: pink;
@@ -154,7 +158,7 @@ export const AppStyle = styled.div`
       color: #9f587d !important;
     }
     color: #222 !important;
-    box-shadow: #f1dae0 0 20px 55px inset;
+    box-shadow: #f1dae0 0 20px 55px inset, #f1dae0 0px -50dvh 0px;
   }
   /* section:nth-last-child(2) {
     background: #f6e5d9;
