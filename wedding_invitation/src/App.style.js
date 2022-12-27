@@ -64,6 +64,17 @@ export const AppStyle = styled.div`
     list-style: none;
   }
 
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+  }
   /* cummon */
 
   .top {

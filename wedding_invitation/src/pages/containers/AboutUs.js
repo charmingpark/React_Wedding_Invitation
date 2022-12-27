@@ -5,6 +5,9 @@ import TabUnstyled from '@mui/base/TabUnstyled';
 import { AboutUsStyle } from './AboutUs.style.js';
 import { forwardRef } from 'react';
 import Clipboard from 'clipboard';
+import groom from '../../images/groom.jpg';
+import bride from '../../images/bride.jpg';
+import icon_tel from '../../images/icon_tel_m.png';
 
 const AboutUs = forwardRef((props, ref) => {
   const clipboard = new Clipboard('.bankCopy');
@@ -42,75 +45,73 @@ const AboutUs = forwardRef((props, ref) => {
             </div>
             {/* table 태그로 구현하기 */}
             <TabsUnstyled defaultValue={0}>
-              <TabsListUnstyled className="photo">
+              <TabsListUnstyled className="groomNBride">
+                <TabUnstyled></TabUnstyled>
                 <TabUnstyled>
-                  <div className="groom"></div>
+                  <img src={groom} alt="신랑 김동진" />
+                  <p>
+                    <strong>신랑 김동진</strong>
+                  </p>
                 </TabUnstyled>
                 <TabUnstyled>
-                  <div className="bride"></div>
+                  <img src={bride} alt="신부 박찬민" />
+                  <p>
+                    <strong>신부 박찬민</strong>
+                  </p>
                 </TabUnstyled>
               </TabsListUnstyled>
-              <TabPanelUnstyled value={0}>First page</TabPanelUnstyled>
-              <TabPanelUnstyled value={1}>Second page</TabPanelUnstyled>
+              <TabPanelUnstyled value={0}>
+                <p className="info">
+                  <b>
+                    사진을 클릭하시면 해당 인물의
+                    <br />
+                    정보를 보실 수 있습니다.
+                  </b>
+                </p>
+              </TabPanelUnstyled>
+              <TabPanelUnstyled value={1}>
+                <div className="from">
+                  <b>김의홍 · 한옥화</b> 의 장남
+                </div>
+                {/* ::after image-background로 전화버튼 삽입 */}
+                <a className="callTo" href="tel:010-2270-6408">
+                  <img src={icon_tel} alt="" />
+                  신랑에게 연락하기
+                </a>
+                <br />
+                <br />
+                {/* 계좌번호 탭 누르면 접혀있던거 열리게 */}
+                {/* popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
+                <a
+                  className="bankCopy"
+                  href="tel:010-2270-6408"
+                  data-clipboard-text="우리은행 1002-454-084513 정창윤"
+                >
+                  신랑측에 축의금 보내기
+                  <span>(클릭하시면 계좌번호가 복사됩니다.)</span>
+                </a>
+              </TabPanelUnstyled>
+              <TabPanelUnstyled value={2}>
+                <div className="from">
+                  <b>박춘서 · 오치림</b> 의 장녀
+                </div>
+                {/* ::after image-background로 전화버튼 삽입 */}
+                <a href="tel:010-2270-6408">신랑에게 연락하기</a>
+                <br />
+                <br />
+                {/* 계좌번호 탭 누르면 접혀있던거 열리게 */}
+                {/* popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
+                <a className="callTo" href="tel:010-2270-6408">
+                  신랑측에 축의금 보내기
+                </a>
+                <button
+                  className="no1 bankCopy"
+                  data-clipboard-text="우리은행 1002-454-084513 정창윤"
+                >
+                  <span>계좌번호 복사</span>
+                </button>
+              </TabPanelUnstyled>
             </TabsUnstyled>
-            <em>김의홍 · 한옥화</em>의 장남
-            <strong>김동진</strong>
-            {/* ::after image-background로 전화버튼 삽입 */}
-            <a href="tel:010-2270-6408">전화</a>
-            {/* 계좌번호 탭 누르면 접혀있던거 열리게 */}
-            <div className="contBox orderBankInfo groom">
-              <div className="tit">
-                <span>신랑 측 축의금 보내기</span>
-              </div>
-              <div className="toggle" data-id="bank-0">
-                <div className="info">
-                  <div className="bank">
-                    <span>우리은행</span>
-                    <em>1002-454-084513</em>
-                  </div>
-                  <div className="name">
-                    <p>
-                      신랑
-                      <em>정창윤</em>
-                    </p>
-                  </div>
-                </div>
-                <div className="btn">
-                  <button
-                    className="no2 bankCopy"
-                    data-clipboard-text="우리은행 1002-454-084513 정창윤"
-                  >
-                    <span>계좌번호 복사</span>
-                  </button>
-                </div>
-              </div>
-              <div className="toggle" data-id="bank-1">
-                <div className="info">
-                  <div className="bank">
-                    <span>하나은행</span>
-                    <em>223-18-17116-9</em>
-                  </div>
-                  <div className="name">
-                    <p>
-                      아버지
-                      <em>정후길</em>
-                    </p>
-                  </div>
-                </div>
-                <div className="btn">
-                  <button
-                    className="no2 bankCopy"
-                    data-clipboard-text="하나은행 223-18-17116-9 정후길"
-                  >
-                    <span>계좌번호 복사</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="box">
-              <em>박춘서 · 오치림</em>의 장녀
-              <strong>박찬민</strong>
-            </div>
           </div>
         </div>
       </AboutUsStyle>
