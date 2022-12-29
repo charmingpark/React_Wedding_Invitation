@@ -42,7 +42,7 @@ export default function Loading() {
   }, []);
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '80%' }}>
       <LinearProgressWithLabel value={progress} />
     </Box>
   );

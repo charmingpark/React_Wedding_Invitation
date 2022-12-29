@@ -84,12 +84,12 @@ export const AppStyle = styled.div`
     text-indent: 0.1em;
     letter-spacing: 0.41em;
     text-indent: 0.41em;
-    padding: 21% 15% 5%;
+    padding: 13dvh 15% 5%;
   }
 
   @media not (max-width: 800px) {
     .top {
-      padding: 17% 15% 5%;
+      padding: 13dvh 15% 5%;
     }
   }
 
@@ -117,11 +117,9 @@ export const AppStyle = styled.div`
   .secTitleWrap p {
     margin-top: 8px;
     font-size: 1.15em;
-    margin-bottom: 30px;
+    margin-bottom: 3.2dvh;
     line-height: 1.4;
     letter-spacing: 2px;
-    line-height: 2;
-    /* margin-bottom: 27px; */
   }
 
   .textBox p:first-of-type {
@@ -129,6 +127,7 @@ export const AppStyle = styled.div`
     margin-bottom: 27px;
     font-size: 1.05em;
     color: #222;
+    padding: 15px;
   }
 
   @media all and (max-width: 800px) {

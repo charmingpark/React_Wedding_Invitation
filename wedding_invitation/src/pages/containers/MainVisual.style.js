@@ -22,7 +22,7 @@ export const MainVisualStyle = styled.div`
     content: '';
     position: absolute;
     z-index: 1;
-    bottom: -26px;
+    bottom: -25px;
     left: 0;
     background: url(${scroll_bg}) no-repeat center;
     width: 100%;

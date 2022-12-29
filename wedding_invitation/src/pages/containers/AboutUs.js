@@ -62,11 +62,9 @@ const AboutUs = forwardRef((props, ref) => {
               </TabsListUnstyled>
               <TabPanelUnstyled value={0}>
                 <p className="info">
-                  <b>
-                    사진을 클릭하시면 해당 인물의
-                    <br />
-                    정보를 보실 수 있습니다.
-                  </b>
+                  사진을 클릭하시면 해당 인물의
+                  <br />
+                  정보를 보실 수 있습니다.
                 </p>
               </TabPanelUnstyled>
               <TabPanelUnstyled value={1}>
@@ -79,9 +77,7 @@ const AboutUs = forwardRef((props, ref) => {
                   신랑에게 연락하기
                 </a>
                 <br />
-                <br />
-                {/* 계좌번호 탭 누르면 접혀있던거 열리게 */}
-                {/* popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
+                {/* TODO: popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
                 <a
                   className="bankCopy"
                   href="tel:010-2270-6408"
@@ -96,20 +92,20 @@ const AboutUs = forwardRef((props, ref) => {
                   <b>박춘서 · 오치림</b> 의 장녀
                 </div>
                 {/* ::after image-background로 전화버튼 삽입 */}
-                <a href="tel:010-2270-6408">신랑에게 연락하기</a>
-                <br />
-                <br />
-                {/* 계좌번호 탭 누르면 접혀있던거 열리게 */}
-                {/* popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
                 <a className="callTo" href="tel:010-2270-6408">
-                  신랑측에 축의금 보내기
+                  <img src={icon_tel} alt="" />
+                  신부에게 연락하기
                 </a>
-                <button
-                  className="no1 bankCopy"
+                <br />
+                {/* TODO: popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
+                <a
+                  className="bankCopy"
+                  href="tel:010-2270-6408"
                   data-clipboard-text="우리은행 1002-454-084513 정창윤"
                 >
-                  <span>계좌번호 복사</span>
-                </button>
+                  신부측에 축의금 보내기
+                  <span>(클릭하시면 계좌번호가 복사됩니다.)</span>
+                </a>
               </TabPanelUnstyled>
             </TabsUnstyled>
           </div>

@@ -30,7 +30,7 @@ const Greeting = forwardRef((props, ref) => {
                 <br />
                 모두 함께 축복해 주세요.
               </p>
-              <p className="from dotted-spaced">
+              <p className="from">
                 <b>김의홍</b> · <b>한옥화</b>의 장남<em>김동진</em>
                 <br />
                 <b>박춘서</b> · <b>오치림</b>의 장녀<em>박찬민</em>

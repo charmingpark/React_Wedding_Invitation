@@ -2,18 +2,18 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 
 const Calendar = ({ month, year }) => {
   const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12',
   ];
 
   // Get the number of days in the month
@@ -23,7 +23,7 @@ const Calendar = ({ month, year }) => {
   const firstDayOfMonth = new Date(year, month, 1).getDay();
 
   // Create an array of the days of the week
-  const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
 
   // Create an array of arrays representing the rows of the calendar
   const calendarRows = [];
@@ -48,27 +48,38 @@ const Calendar = ({ month, year }) => {
   }
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th colSpan="7">{months[month]}</th>
-        </tr>
-        <tr>
-          {weekdays.map((weekday) => (
-            <th key={weekday}>{weekday}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {calendarRows.map((row, i) => (
-          <tr key={i}>
-            {row.map((day, j) => (
-              <td key={`${i}-${j}`}>{day}</td>
+    <>
+      <table className="calender">
+        <thead>
+          <tr>
+            <th className="month" colSpan="7">
+              {months[month]}
+            </th>
+          </tr>
+          <tr>
+            {weekdays.map((weekday) => (
+              <th
+                className={weekday === '일' ? 'weekend' : 'weekday'}
+                key={weekday}
+              >
+                {weekday}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {calendarRows.map((row, i) => (
+            <tr key={i}>
+              {row.map((day, j) => (
+                <td key={`${i}-${j}`} className={day === 18 ? 'heart' : ''}>
+                  {day}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 };
 

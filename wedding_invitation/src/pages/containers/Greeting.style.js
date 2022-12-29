@@ -5,7 +5,7 @@ export const GreetingStyle = styled.div`
     color: #694a32;
     font-size: 0.85em;
     margin: 3em 5em;
-    padding: 1.5em 0 1em;
+    padding: 1.2dvh 0 1em;
     line-height: 2em;
     font-family: 'Pretendard', serif;
     em {
@@ -22,7 +22,7 @@ export const GreetingStyle = styled.div`
       margin: 0 auto;
     }
   }
-
+  /* 
   .dotted-spaced {
     background-image: linear-gradient(
       to right,
@@ -32,5 +32,5 @@ export const GreetingStyle = styled.div`
     background-position: top;
     background-size: 5px 1px;
     background-repeat: repeat-x;
-  }
+  } */
 `;

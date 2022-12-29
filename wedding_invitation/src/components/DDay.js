@@ -1,38 +1,26 @@
-import React, { useState, useEffect } from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react'; // eslint-disable-line no-unused-vars
 
-function DDay(props) {
-  const [days, setDays] = useState(null);
-  const [hours, setHours] = useState(null);
-  const [minutes, setMinutes] = useState(null);
-  const [seconds, setSeconds] = useState(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Calculate the time remaining until the event
-      const currentTime = new Date().getTime();
-      const eventTime = new Date(props.eventDate).getTime();
-      const timeRemaining = eventTime - currentTime;
-
-      // Calculate the days, hours, minutes, and seconds remaining
-      setDays(Math.floor(timeRemaining / (1000 * 60 * 60 * 24)));
-      setHours(
-        Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      );
-      setMinutes(Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60)));
-      setSeconds(Math.floor((timeRemaining % (1000 * 60)) / 1000));
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+const DDay = (props) => {
+  const currentDate = new Date();
+  const targetDate = new Date(props.year, props.month - 1, props.day); // The month value is 0-based, so we subtract 1 to convert it to the correct value
+  const timeDifference = targetDate - currentDate;
+  const daysUntilDDay = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
   return (
-    <div className="d-day-countdown">
-      <div className="days">{days} days</div>
-      <div className="hours">{hours} hours</div>
-      <div className="minutes">{minutes} minutes</div>
-      <div className="seconds">{seconds} seconds</div>
+    <div className="dday">
+      {daysUntilDDay >= 0 ? (
+        <p>
+          <b>동진</b> <em>&#9829;</em> <b>찬민</b> 의 결혼식이
+          <b>&#32;{daysUntilDDay + 1}일&#32;</b>
+          남았습니다.
+        </p>
+      ) : (
+        <p>
+          <b>동진</b> <em>&#9829;</em> <b>찬민</b>은 부부가 되었습니다.
+        </p>
+      )}
     </div>
   );
-}
+};
 
 export default DDay;

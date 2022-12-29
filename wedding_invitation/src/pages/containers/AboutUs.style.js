@@ -24,7 +24,11 @@ export const AboutUsStyle = styled.div`
   }
 
   p.info {
-    margin-top: 2em;
+    margin-top: 3em;
+    line-height: 1.5em;
+    font-family: 'Pretendard', serif;
+    font-size: 0.85em;
+    font-weight: 500;
   }
   a.callTo {
     padding: 5px 0;
@@ -47,6 +51,7 @@ export const AboutUsStyle = styled.div`
   }
   a.bankCopy {
     padding: 5px 0;
+    margin: 1em;
     width: 14em;
     border-radius: 8px;
     border: 0.5px solid #fff;
