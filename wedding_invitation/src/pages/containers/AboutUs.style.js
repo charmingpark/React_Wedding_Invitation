@@ -49,17 +49,20 @@ export const AboutUsStyle = styled.div`
       right: 8px;
     }
   }
-  a.bankCopy {
-    padding: 5px 0;
+  button.bankCopy {
     margin: 1em;
     width: 14em;
+    height: 2.8em;
     border-radius: 8px;
     border: 0.5px solid #fff;
     display: inline-block;
+    -webkit-text-decoration: auto;
     text-decoration: auto;
     color: #fff;
     opacity: 0.8;
-    span {
+    line-height: 1.8em;
+    &:after {
+      content: '(클릭하시면 계좌번호가 복사됩니다.)';
       display: block;
       margin-top: -10px;
       font-size: 0.8em;

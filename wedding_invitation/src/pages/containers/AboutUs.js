@@ -78,14 +78,12 @@ const AboutUs = forwardRef((props, ref) => {
                 </a>
                 <br />
                 {/* TODO: popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
-                <a
+                <button
                   className="bankCopy"
-                  href="tel:010-2270-6408"
-                  data-clipboard-text="우리은행 1002-454-084513 정창윤"
+                  data-clipboard-text="농협NH 301000-72-72481 김동진"
                 >
                   신랑측에 축의금 보내기
-                  <span>(클릭하시면 계좌번호가 복사됩니다.)</span>
-                </a>
+                </button>
               </TabPanelUnstyled>
               <TabPanelUnstyled value={2}>
                 <div className="from">
@@ -98,14 +96,12 @@ const AboutUs = forwardRef((props, ref) => {
                 </a>
                 <br />
                 {/* TODO: popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
-                <a
+                <button
                   className="bankCopy"
-                  href="tel:010-2270-6408"
-                  data-clipboard-text="우리은행 1002-454-084513 정창윤"
+                  data-clipboard-text="국민은행 048402-04-324513 박찬민"
                 >
                   신부측에 축의금 보내기
-                  <span>(클릭하시면 계좌번호가 복사됩니다.)</span>
-                </a>
+                </button>
               </TabPanelUnstyled>
             </TabsUnstyled>
           </div>

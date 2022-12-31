@@ -41,8 +41,8 @@ function Container() {
         <Greeting ref={boxRef} />
         <AboutUs ref={boxRef} />
         <WeddingDay ref={boxRef} />
-        <Gallery ref={boxRef} />
         <Location ref={boxRef} />
+        <Gallery ref={boxRef} />
         <Credit ref={boxRef} />
       </div>
     </ContainerStyle>

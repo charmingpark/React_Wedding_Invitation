@@ -1,11 +1,12 @@
 /* eslint-disable */
 
+
 function QuickMenu() {
 
   //var g5_url = 'https://developers.kakao.com/'; //원래 다다단플젝 url
 
 
-  const kakaolink_send = () => {
+  const kakaolink_send_test = () => {
     console.log(`something3`)
   }
 
@@ -62,7 +63,7 @@ function QuickMenu() {
   //   }
   // };
 
-  const kakaolink_send2 = () => {
+  const kakaolink_send = () => {
     window.Kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
@@ -160,7 +161,7 @@ function QuickMenu() {
         <a href="#" className="btnDown">
           아래로 가기
         </a>
-        <button onClick={kakaolink_send2}>
+        <button onClick={kakaolink_send}>
         카카오톡 공유 보내기 버튼
         </button>
       </div>

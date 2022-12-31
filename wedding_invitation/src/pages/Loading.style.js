@@ -18,7 +18,7 @@ export const LoadingStyle = styled.div`
     border-radius: 50px;
     position: relative;
   }
-  .loadingBar::before {
+  .loadingBar:before {
     content: '';
     animation: fill 3s linear;
     background-color: #ccc;
