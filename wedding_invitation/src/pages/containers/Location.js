@@ -1,4 +1,5 @@
 import { LocationStyle } from './Location.style.js';
+// import KakaoMap from '../../components/KakaoMap.js';
 import Clipboard from 'clipboard';
 
 import { forwardRef } from 'react';
@@ -37,7 +38,7 @@ const Location = forwardRef((props, ref) => {
                   <b>영일교회</b>
                   <button
                     className="addrCopy"
-                    data-clipboard-text="서울 서초구 바우뫼로41길 67"
+                    data-clipboard-text="서울 서초구 바우뫼로41길 67 영일교회"
                   >
                     예식장
                     <br />
@@ -51,7 +52,7 @@ const Location = forwardRef((props, ref) => {
                   <b>성문주차장</b>
                   <button
                     className="addrCopy"
-                    data-clipboard-text="서울 서초구 남부순환로 2636"
+                    data-clipboard-text="서울 서초구 남부순환로 2636 성문주차장"
                   >
                     주차장
                     <br />
@@ -61,7 +62,7 @@ const Location = forwardRef((props, ref) => {
                 <p>서울 서초구 남부순환로 2636</p>
               </li>
             </ul>
-            <div className="map"> </div>
+            {/* <KakaoMap /> */}
             {/* <!-- //mapWrap --> */}
           </div>
         </div>

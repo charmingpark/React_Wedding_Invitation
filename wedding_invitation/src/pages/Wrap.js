@@ -1,4 +1,4 @@
-import Header from './../components/Header.js';
+// import Header from './../components/Header.js';
 import QuickMenu from './../components/QuickMenu.js';
 import Container from './Container.js';
 
