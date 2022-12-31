@@ -17,14 +17,14 @@ const KakaoMap = () => {
 
   return (
     <KakaoMapStyle>
-      <Map>
-        center=
-        {{
+      <Map
+        center={{
           // 지도의 중심좌표
-          lat: 37.484341,
+          lat: 37.485,
           lng: 127.039298,
         }}
-        level={3}
+        level={5}
+      >
         {/* 지도의 확대 레벨 (작을 수록 크게 보입니다) */}
         {positions.map((position) => (
           <>

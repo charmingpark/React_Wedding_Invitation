@@ -2,11 +2,7 @@ import ImageSlider from '../../components/ImageSlider.js';
 import { forwardRef } from 'react';
 
 const Gallery = forwardRef((props, ref) => {
-  const images = [
-    'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-  ];
+  const images = [];
 
   return (
     <section
