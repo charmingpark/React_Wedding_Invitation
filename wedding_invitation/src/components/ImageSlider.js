@@ -1,70 +1,114 @@
-import React, { useState } from 'react'; // eslint-disable-line no-unused-vars
-import Modal from 'react-modal';
+import { useState, useEffect } from 'react';
 
-Modal.setAppElement(document.getElementById('root'));
+import img1 from '../images/bride.jpg';
+import img2 from '../images/heart.png';
+import img3 from '../images/flowerBg.jpg';
 
-const ImageSlider = ({ images }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+import { ImageSliderStyle } from './ImageSlider.style.js';
+
+const ImageSlider = () => {
+  const images = [img1, img2, img3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((currentIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const handlePopupClose = () => {
+    setIsPopupOpen(false);
+  };
+
+  const handlePopupOpen = (index) => {
+    setCurrentIndex(index);
+    setIsPopupOpen(true);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
+  };
 
   const handleNext = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % images.length);
-  };
-
-  const handlePrevious = () => {
-    setCurrentImageIndex(
-      (currentImageIndex - 1 + images.length) % images.length
-    );
-  };
-
-  const handleImageClick = (index) => {
-    setCurrentImageIndex(index);
-    setModalIsOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setModalIsOpen(false);
+    setCurrentIndex((currentIndex + 1) % images.length);
   };
 
   return (
-    <div className="image-slider">
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={handleModalClose}
-        appElement={document.getElementById('root')}
-      >
-        <img className="galleryModal" src={images[currentImageIndex]} alt="" />
-        <button onClick={handleModalClose}>Close</button>
-      </Modal>
-      <button className="image-slider__previous" onClick={handlePrevious}>
-        &lt;
-      </button>
-      <button
-        className="image-slider__main"
-        onClick={() => handleImageClick(currentImageIndex)}
-      >
-        <img src={images[currentImageIndex]} alt="" />
-      </button>
-      <button className="image-slider__next" onClick={handleNext}>
-        &gt;
-      </button>
-      <div className="image-slider__thumbnails">
-        {images.map((image, index) => (
-          <button
-            className="imgbtn"
-            onClick={() => handleImageClick(index)}
-            key={image}
-          >
-            <img
-              src={image}
-              alt=""
-              className={index === currentImageIndex ? 'selected' : ''}
-            />
-          </button>
-        ))}
+    <ImageSliderStyle>
+      <div className="slide">
+        {isPopupOpen && (
+          <Popup image={images[currentIndex]} onClose={handlePopupClose} />
+        )}
+        <button
+          onClick={() => handlePopupOpen(currentIndex)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              handlePopupOpen(currentIndex);
+            }
+          }}
+        >
+          <img
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex}`}
+            className="slide-image"
+          />
+        </button>
+
+        <div className="thumbnail-container">
+          {images.map((image, index) => (
+            <button
+              className={`thumbnail-button ${
+                index === currentIndex ? 'current' : ''
+              }`}
+              key={index}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  handlePopupOpen(index);
+                }
+              }}
+              onClick={() => handlePopupOpen(index)}
+            >
+              <button
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    handlePopupOpen(index);
+                  }
+                }}
+                onClick={() => handlePopupOpen(index)}
+              >
+                <img
+                  src={image}
+                  alt={`Thumbnail ${index + 1}`}
+                  className={`thumbnail ${
+                    index === currentIndex ? 'current' : ''
+                  }`}
+                />
+              </button>
+            </button>
+          ))}
+        </div>
+        <button className="prev-button" onClick={handlePrev}>
+          Prev
+        </button>
+        <button className="next-button" onClick={handleNext}>
+          Next
+        </button>
       </div>
-    </div>
+    </ImageSliderStyle>
   );
 };
+
+const Popup = ({ image, onClose }) => (
+  <div className="popup-overlay">
+    <div className="popup">
+      <img src={image} alt="Popup" className="popup-image" />
+      <button className="close-button" onClick={onClose}>
+        Close
+      </button>
+    </div>
+  </div>
+);
 
 export default ImageSlider;

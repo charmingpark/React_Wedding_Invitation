@@ -1,10 +1,10 @@
 import { MainVisualStyle } from './MainVisual.style.js';
 
-function MainVisual() {
+function MainVisual({ thefirstPage }) {
   const date = ['23', '02', '18'];
   return (
     <section className="mainVisual" id="mainVisual">
-      <MainVisualStyle>
+      <MainVisualStyle thefirstPage={thefirstPage}>
         {/* <!-- visualBox --> */}
         <div className="visualBox">
           <div className="imgBox">

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import scroll_bg from '../../images/scroll_bg.png';
 import circle from '../../images/circle.png';
+// import BGimg from '../../images/thefirstPage.png';
 
 export const MainVisualStyle = styled.div`
   /* 둥근 테두리 */
@@ -18,6 +19,12 @@ export const MainVisualStyle = styled.div`
     border-radius: 230px 230px 0 0;
   }
 
+  .visualBox {
+    background: url(${(props) => props.thefirstPage}) no-repeat bottom/cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
   .visualBox:before {
     content: '';
     position: absolute;
@@ -32,6 +39,9 @@ export const MainVisualStyle = styled.div`
   .in {
     position: absolute;
     width: 100%;
+  }
+  .topText .top {
+    padding-top: 8vh;
   }
 
   .bottomName {

@@ -159,9 +159,6 @@ export const AppStyle = styled.div`
   section:nth-of-type(2n + 4) {
     box-shadow: #334357 0px -50dvh 0px;
   }
-  section:first-of-type {
-    background: pink;
-  }
   section:last-child {
     background: url(${flowerBg}) no-repeat bottom/cover;
     .top {

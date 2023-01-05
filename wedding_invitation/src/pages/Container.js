@@ -8,7 +8,7 @@ import Credit from './containers/Credit.js';
 import { ContainerStyle } from './Container.style.js';
 import { useRef, useEffect } from 'react';
 
-function Container() {
+function Container({ thefirstPage }) {
   const boxRef = useRef([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function Container() {
   return (
     <ContainerStyle>
       <div id="Container">
-        <MainVisual />
+        <MainVisual thefirstPage={thefirstPage} />
         <Greeting ref={boxRef} />
         <AboutUs ref={boxRef} />
         <WeddingDay ref={boxRef} />

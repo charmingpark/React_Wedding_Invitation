@@ -2,8 +2,6 @@ import ImageSlider from '../../components/ImageSlider.js';
 import { forwardRef } from 'react';
 
 const Gallery = forwardRef((props, ref) => {
-  const images = [];
-
   return (
     <section
       className="galleryWrap atm"
@@ -20,7 +18,7 @@ const Gallery = forwardRef((props, ref) => {
             <br />큰 사이즈로 확인하실 수 있습니다.
           </p>
         </div>
-        <ImageSlider images={images} />
+        <ImageSlider />
       </div>
     </section>
   );

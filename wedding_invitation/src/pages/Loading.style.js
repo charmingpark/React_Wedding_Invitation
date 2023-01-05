@@ -1,52 +1,28 @@
 import styled from 'styled-components';
-
 export const LoadingStyle = styled.div`
-  * {
-    background-color: black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .loadingBar {
-    background-color: #5d5d5d;
-    border: 3px solid white;
-    height: 5px;
-    width: 100px;
-    border-radius: 50px;
+  .LoadingBox {
+    opacity: 0.8;
+    width: 100vw;
+    height: 100vh;
     position: relative;
-  }
-  .loadingBar:before {
-    content: '';
-    animation: fill 3s linear;
-    background-color: #ccc;
-    height: 5px;
-    /* width: 10%; */
-    position: absolute;
-    left: 1px;
-    right: 1px;
-    border-radius: 50px;
-    transform: translateY(5%);
-  }
-  @keyframes fill {
-    0% {
-      width: 25%;
-    }
-    50% {
-      width: 50%;
-    }
-    100% {
-      width: 95%;
-    }
-  }
+    overflow: hidden;
 
-  .loading {
-    color: white;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    .title1 {
+      position: absolute;
+      top: 2.5em;
+      right: 2.5em;
+      writing-mode: 'vertical-rl';
+      line-height: 1.5em;
+      font-family: 'AritaBuri';
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+    .title2 {
+      font-family: 'AritaBuri';
+      position: absolute;
+      top: 1.2em;
+      right: 2rem;
+      font-size: 3em;
+    }
   }
 `;
