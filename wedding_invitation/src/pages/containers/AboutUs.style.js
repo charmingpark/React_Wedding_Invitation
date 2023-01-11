@@ -80,3 +80,5 @@ export const AboutUsStyle = styled.div`
     font-family: 'Pretendard', serif;
   }
 `;
+
+// MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper css-3bmhjh-MuiPaper-root-MuiPopover-paper

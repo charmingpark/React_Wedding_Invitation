@@ -6,9 +6,8 @@ import PopImg from './pages/PopImg';
 import Loading from './pages/Loading';
 import thefirstPage from './images/thefirstPage.png';
 
-// import './Sakura.css';
-// import './Sakura.js';
 import { AppStyle } from './App.style.js';
+import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -29,14 +28,16 @@ function App() {
   }
 
   return (
-    <AppStyle>
-      <div className="App">
-        <SkipNav />
-        <Wrap thefirstPage={thefirstPage} />
-        <PopGnb />
-        <PopImg />
-      </div>
-    </AppStyle>
+    <StyledEngineProvider injectFirst>
+      <AppStyle>
+        <div className="App">
+          <SkipNav />
+          <Wrap thefirstPage={thefirstPage} />
+          <PopGnb />
+          <PopImg />
+        </div>
+      </AppStyle>
+    </StyledEngineProvider>
   );
 }
 
