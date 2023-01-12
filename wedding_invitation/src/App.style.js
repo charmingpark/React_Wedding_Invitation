@@ -84,7 +84,7 @@ export const AppStyle = styled.div`
     text-indent: 0.1em;
     letter-spacing: 0.41em;
     text-indent: 0.41em;
-    padding: 13dvh 15% 5%;
+    padding: 16vh 15% 5%;
   }
 
   @media not (max-width: 800px) {
@@ -115,9 +115,9 @@ export const AppStyle = styled.div`
   }
 
   .secTitleWrap p {
-    margin-top: 8px;
+    margin-top: 18px;
     font-size: 1.15em;
-    margin-bottom: 3.2dvh;
+    margin-bottom: 2.5dvh;
     line-height: 1.4;
     letter-spacing: 2px;
   }
@@ -127,7 +127,7 @@ export const AppStyle = styled.div`
     margin-bottom: 27px;
     font-size: 1.05em;
     color: #222;
-    padding: 15px;
+    padding: 13px;
   }
 
   @media all and (max-width: 800px) {

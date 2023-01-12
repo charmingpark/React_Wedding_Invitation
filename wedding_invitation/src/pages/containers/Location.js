@@ -2,9 +2,34 @@ import { LocationStyle } from './Location.style.js';
 import KakaoMap from '../../components/KakaoMap.js';
 import Clipboard from 'clipboard';
 
-import { forwardRef } from 'react';
+import { useState, useEffect, useRef, forwardRef } from 'react';
+import Popover from '@mui/material/Popover';
 
 const Location = forwardRef((props, ref) => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const timeoutRef = useRef(null);
+
+  const handleClick = (event) => {
+    timeoutRef.current = setTimeout(() => {
+      setAnchorEl(null);
+    }, 1500);
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+    clearTimeout(timeoutRef.current);
+  };
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
+
   const clipboard = new Clipboard('.addrCopy');
   clipboard.on('success', function (e) {
     console.log('Action:', e.action);
@@ -39,11 +64,30 @@ const Location = forwardRef((props, ref) => {
                   <button
                     className="addrCopy"
                     data-clipboard-text="서울 서초구 바우뫼로41길 67 영일교회"
+                    aria-describedby={id}
+                    onClick={handleClick}
                   >
                     예식장
                     <br />
                     주소 복사
                   </button>
+                  <Popover
+                    id={id}
+                    open={open}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'center',
+                    }}
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'center',
+                    }}
+                    // sx={{ p: 1 }}
+                  >
+                    <span>복사되었습니다.</span>
+                  </Popover>
                 </h3>
                 <p>서울 서초구 바우뫼로41길 67 </p>
               </li>
@@ -53,11 +97,30 @@ const Location = forwardRef((props, ref) => {
                   <button
                     className="addrCopy"
                     data-clipboard-text="서울 서초구 남부순환로 2636 성문주차장"
+                    aria-describedby={id}
+                    onClick={handleClick}
                   >
                     주차장
                     <br />
                     주소 복사
                   </button>
+                  <Popover
+                    id={id}
+                    open={open}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'center',
+                    }}
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'center',
+                    }}
+                    // sx={{ p: 1 }}
+                  >
+                    <span>복사되었습니다.</span>
+                  </Popover>
                 </h3>
                 <p>서울 서초구 남부순환로 2636</p>
               </li>

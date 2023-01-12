@@ -35,6 +35,11 @@ export const LocationStyle = styled.div`
           border-radius: 8px;
           height: 3em;
           padding: 5px 10px;
+          cursor: pointer;
+
+          /* &:hover {
+            background-color: #f1dae0cc;
+          } */
         }
       }
       p {

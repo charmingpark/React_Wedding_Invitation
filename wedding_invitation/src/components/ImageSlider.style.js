@@ -78,4 +78,7 @@ export const ImageSliderStyle = styled.div`
     color: black;
     outline: none;
   }
+  .slide {
+    height: 10px;
+  }
 `;

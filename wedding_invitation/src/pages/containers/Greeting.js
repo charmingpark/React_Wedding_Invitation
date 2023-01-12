@@ -23,7 +23,7 @@ const Greeting = forwardRef((props, ref) => {
                 <br />
                 아름다운 약속을 하려 합니다.
                 <br />
-                <br />
+                <div className="addHeight" />
                 언제나 아름답고 주위에 사랑을 나누는
                 <br />
                 행복한 가정을 이루도록

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const KakaoMapStyle = styled.div`
   width: 100%; //지도 컨테이너 크기
-  height: 34vh; //지도 컨테이너 넓이
+  height: 40vh; //지도 컨테이너 넓이
   margin: 0 auto;
   background-color: #ccc;
 
