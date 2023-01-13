@@ -64,7 +64,7 @@ const Popup = ({ onClose }) => (
   <div className="popup-overlay">
     <div className="popup">
       <div>
-        <h2 className="createdBy">제작한 사람</h2>
+        <h2 className="createdBy">제작에 기여한 사람들</h2>
         <ul className="addr">
           <li>
             <h3>
