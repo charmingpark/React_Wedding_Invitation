@@ -10,9 +10,9 @@ const Kakaolink = () => {
         link: {
           // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
           mobileWebUrl:
-            'https://ever-ever-after-chanmin-n-dongjin-kjwejeaqf-charmingpark.vercel.app',
+            'https://ever-ever-after-chanmin-n-dongjin-r9wiu0cv9-charmingpark.vercel.app',
           webUrl:
-            'https://ever-ever-after-chanmin-n-dongjin-kjwejeaqf-charmingpark.vercel.app',
+            'https://ever-ever-after-chanmin-n-dongjin-r9wiu0cv9-charmingpark.vercel.app',
         },
       },
       buttons: [
