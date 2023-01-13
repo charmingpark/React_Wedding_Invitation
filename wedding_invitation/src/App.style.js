@@ -162,7 +162,7 @@ export const AppStyle = styled.div`
   section:last-child {
     background: url(${flowerBg}) no-repeat bottom/cover;
     .top {
-      color: #9f587d !important;
+      color: #9f587d;
     }
     color: #222 !important;
     box-shadow: #f1dae0 0 20px 55px inset, #f1dae0 0px -50dvh 0px;

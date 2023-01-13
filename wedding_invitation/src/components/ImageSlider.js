@@ -30,6 +30,7 @@ const ImageSlider = () => {
   const handlePopupClose = () => {
     setIsPopupOpen(false);
   };
+// popupHere
 
   const handlePopupOpen = (index) => {
     setCurrentIndex(index);
@@ -50,6 +51,7 @@ const ImageSlider = () => {
         {isPopupOpen && (
           <Popup image={images[currentIndex]} onClose={handlePopupClose} />
         )}
+        {/* popupHere */}
         <button
           className="image-container"
           onClick={() => handlePopupOpen(currentIndex)}
