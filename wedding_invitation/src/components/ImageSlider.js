@@ -30,7 +30,7 @@ const ImageSlider = () => {
   const handlePopupClose = () => {
     setIsPopupOpen(false);
   };
-// popupHere
+  // popupHere
 
   const handlePopupOpen = (index) => {
     setCurrentIndex(index);
