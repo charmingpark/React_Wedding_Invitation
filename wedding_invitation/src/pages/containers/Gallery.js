@@ -19,12 +19,6 @@ const Gallery = forwardRef((props, ref) => {
         <div className="secTitleWrap t1">
           <h2 className="hanTit ranTxt top mt">갤러리</h2>
         </div>
-        <div className="secTitleWrap">
-          <p className="mt">
-            사진을 클릭하시면
-            <br />큰 사이즈로 확인하실 수 있습니다.
-          </p>
-        </div>
         <ImageSlider />
       </GalleryInner>
     </section>

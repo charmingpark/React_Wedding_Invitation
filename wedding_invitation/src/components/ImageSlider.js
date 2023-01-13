@@ -1,20 +1,25 @@
 import { useState, useEffect } from 'react';
 
-import img1 from '../images/bride.jpg';
-import img2 from '../images/heart.png';
-import img3 from '../images/flowerBg.jpg';
+import img1 from '../images/img_1.jpg';
+import img2 from '../images/img_2.jpg';
+import img3 from '../images/img_3.jpg';
+import img4 from '../images/img_4.jpg';
+import img5 from '../images/img_5.jpg';
+import img6 from '../images/img_6.jpg';
+import Prev from '../images/Prev.png';
+import Next from '../images/Next.png';
 
 import { ImageSliderStyle } from './ImageSlider.style.js';
 
 const ImageSlider = () => {
-  const images = [img1, img2, img3];
+  const images = [img1, img2, img3, img4, img5, img6];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % images.length);
-    }, 3000);
+    }, 50000);
 
     if (isPopupOpen) {
       clearInterval(interval);
@@ -60,8 +65,11 @@ const ImageSlider = () => {
             className="slide-image"
           />
         </button>
-
+        <p>사진을 클릭하시면 전체 비율로 감상하실 수 있습니다.</p>
         <div className="thumbnail-container">
+          <button className="prev-button" onClick={handlePrev}>
+            <img src={Prev} alt="prev" className="prev" />
+          </button>
           {images.map((image, index) => (
             <button
               className={`thumbnail-button ${
@@ -93,13 +101,8 @@ const ImageSlider = () => {
               </button>
             </button>
           ))}
-        </div>
-        <div className="move-buttons">
-          <button className="prev-button" onClick={handlePrev}>
-            Prev
-          </button>
           <button className="next-button" onClick={handleNext}>
-            Next
+            <img src={Next} alt="next" className="next" />
           </button>
         </div>
       </div>

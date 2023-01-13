@@ -1,6 +1,6 @@
 import { LocationStyle } from './Location.style.js';
 import Clipboard from 'clipboard';
-
+import KakaoMap from '../../components/KakaoMap.js';
 import { forwardRef } from 'react';
 
 const Location = forwardRef((props, ref) => {
@@ -61,7 +61,7 @@ const Location = forwardRef((props, ref) => {
                 <p>서울 서초구 남부순환로 2636</p>
               </li>
             </ul>
-            <div className="map"> </div>
+            <KakaoMap />
             {/* <!-- //mapWrap --> */}
           </div>
         </div>

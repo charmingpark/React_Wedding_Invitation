@@ -79,6 +79,15 @@ export const AboutUsStyle = styled.div`
   .from {
     font-family: 'Pretendard', serif;
   }
+
+  .fullyCopied {
+    font-family: 'Pretendard', serif;
+    font-weight: bold;
+    font-size: 0.85em;
+    padding: 0.2em;
+    margin-top: 0.5em;
+    display: block;
+  }
 `;
 
 // MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper css-3bmhjh-MuiPaper-root-MuiPopover-paper

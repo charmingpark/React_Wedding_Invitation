@@ -5,25 +5,31 @@ export const ImageSliderStyle = styled.div`
   overflow: hidden;
 
   .slide {
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100%;
+    margin: 0 auto;
+    width: 95vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
+    p {
+      padding: 0.4em 0;
+      font-family: 'Pretendard', serif;
+      color: #694a32;
+    }
   }
 
   .image-container {
     flex: 1; //남은 영역을 슬라이드 이미지가 차지하게 해준다.
+    width: 95vw;
     display: block;
     overflow: hidden;
   }
 
   .slide-image {
     display: block;
-    width: 100%;
+    width: 95vw;
     height: 100%;
     object-fit: cover;
+    border-radius: 1em;
   }
 
   .thumbnail-container {
@@ -31,24 +37,29 @@ export const ImageSliderStyle = styled.div`
     display: flex;
   }
 
-  .thumbnail-button {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-  }
-
-  .thumbnail {
+  .thumbnail,
+  .prev,
+  .next {
     display: block;
-    width: 80px; //썸네일 너비
-    height: 80px; //썸네일 높이
-    object-fit: cover;
+    width: calc(95vw / 8); //썸네일 너비
+    height: calc(95vw / 8); //썸네일 높이
   }
-
-  .thumbnail-button .current {
+  .thumbnail {
+    object-fit: cover;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  .prev,
+  .next {
+    object-fit: scale-down;
+  }
+  .thumbnail-button {
     //현재 썸네일에 효과를 주고 싶으면 여기에!
-    position: relative;
-    z-index: 10;
-    outline: 2px solid red;
+    opacity: 0.3;
+    &.current {
+      opacity: 1;
+    }
   }
 
   .move-buttons {
@@ -63,9 +74,16 @@ export const ImageSliderStyle = styled.div`
     border: 0;
     color: white;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    width: calc(95vw / 8); //썸네일 너비
+    height: calc(95vw / 8); //썸네일 높이
   }
 
+  .prev,
+  .next {
+    width: calc(95vw / 8); //썸네일 너비
+    height: calc(95vw / 8); //썸네일 높이
+  }
   .popup-overlay {
     position: fixed;
     top: 0;
@@ -81,10 +99,10 @@ export const ImageSliderStyle = styled.div`
 
   .popup {
     background-color: white;
-    border: 1px solid black;
-    border-radius: 4px;
-    max-width: 80%;
-    max-height: 80%;
+    /* border: 1px solid black; */
+    border-radius: 1em;
+    max-width: 95vw;
+    max-height: 95vh;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -92,9 +110,9 @@ export const ImageSliderStyle = styled.div`
   }
 
   .popup-image {
-    max-width: 100%;
+    max-width: 95vw;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .close-button {
