@@ -1,17 +1,33 @@
 import styled from 'styled-components';
 export const ImageSliderStyle = styled.div`
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+
   .slide {
     position: relative;
     overflow: hidden;
     width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-container {
+    flex: 1; //남은 영역을 슬라이드 이미지가 차지하게 해준다.
+    display: block;
+    overflow: hidden;
   }
 
   .slide-image {
-    width: 500px;
-    height: 500px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .thumbnail-container {
+    display: block;
     display: flex;
   }
 
@@ -22,13 +38,23 @@ export const ImageSliderStyle = styled.div`
   }
 
   .thumbnail {
-    width: 100px;
-    height: 100px;
+    display: block;
+    width: 80px; //썸네일 너비
+    height: 80px; //썸네일 높이
     object-fit: cover;
   }
 
-  .current {
-    border: 2px solid red;
+  .thumbnail-button .current {
+    //현재 썸네일에 효과를 주고 싶으면 여기에!
+    position: relative;
+    z-index: 10;
+    outline: 2px solid red;
+  }
+
+  .move-buttons {
+    height: 40px; //버튼 구역 높이
+    display: flex;
+    justify-content: space-between;
   }
 
   .prev-button,
@@ -50,6 +76,7 @@ export const ImageSliderStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 20;
   }
 
   .popup {
@@ -61,6 +88,7 @@ export const ImageSliderStyle = styled.div`
     overflow: auto;
     display: flex;
     flex-direction: column;
+    z-index: 10;
   }
 
   .popup-image {
@@ -77,8 +105,5 @@ export const ImageSliderStyle = styled.div`
     font-size: 16px;
     color: black;
     outline: none;
-  }
-  .slide {
-    height: 10px;
   }
 `;

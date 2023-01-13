@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
 import { CreditStyle } from './Credit.style.js';
+import Kakaolink from '../../components/Kakaolink.js';
 
 const Credit = forwardRef((props, ref) => {
   return (
@@ -13,7 +14,7 @@ const Credit = forwardRef((props, ref) => {
           <h2 className="hanTit ranTxt top">감사인사</h2>
           <p>모두에게 감사합니다.</p>
           <div className="textBox">
-            <p className="mt">
+            <p>
               {/* style="white-space: pre-line;" */}
               함께 노력해 청첩장 사이트를
               <br />
@@ -29,8 +30,8 @@ const Credit = forwardRef((props, ref) => {
               <br />
             </p>
           </div>
-          <button className="creater">만든 사람들</button>
-          <button className="creater">카톡으로 공유하기</button>
+          <button className="creater">제작한 사람</button>
+          <Kakaolink />
         </div>
       </CreditStyle>
     </section>

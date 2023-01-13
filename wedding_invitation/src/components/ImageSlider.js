@@ -15,8 +15,12 @@ const ImageSlider = () => {
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % images.length);
     }, 3000);
+
+    if (isPopupOpen) {
+      clearInterval(interval);
+    }
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, isPopupOpen]);
 
   const handlePopupClose = () => {
     setIsPopupOpen(false);
@@ -42,6 +46,7 @@ const ImageSlider = () => {
           <Popup image={images[currentIndex]} onClose={handlePopupClose} />
         )}
         <button
+          className="image-container"
           onClick={() => handlePopupOpen(currentIndex)}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -89,12 +94,14 @@ const ImageSlider = () => {
             </button>
           ))}
         </div>
-        <button className="prev-button" onClick={handlePrev}>
-          Prev
-        </button>
-        <button className="next-button" onClick={handleNext}>
-          Next
-        </button>
+        <div className="move-buttons">
+          <button className="prev-button" onClick={handlePrev}>
+            Prev
+          </button>
+          <button className="next-button" onClick={handleNext}>
+            Next
+          </button>
+        </div>
       </div>
     </ImageSliderStyle>
   );
