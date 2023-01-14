@@ -49,7 +49,7 @@ const Credit = forwardRef((props, ref) => {
               }
             }}
           >
-            제작한 사람
+            제작에 기여한 사람들
           </button>
           <Kakaolink />
         </div>

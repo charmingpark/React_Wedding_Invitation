@@ -88,13 +88,15 @@ const AboutUs = forwardRef((props, ref) => {
                 </a>
                 <br />
                 {/* TODO: popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
-                <button
-                  className="bankCopy"
-                  data-clipboard-text="농협NH 301000-72-72481 김동진"
-                  onClick={handleClick}
-                >
-                  신랑측에 축의금 보내기
-                </button>
+                <div className="bankCopy-container">
+                  <button
+                    className="bankCopy groom"
+                    data-clipboard-text="농협NH 301000-72-72481 김동진"
+                    onClick={handleClick}
+                  >
+                    신부측에 축의금 보내기
+                  </button>
+                </div>
                 <div className="fullyCopied" style={{ opacity: displayCss }}>
                   복사되었습니다.
                 </div>
@@ -104,19 +106,21 @@ const AboutUs = forwardRef((props, ref) => {
                   <b>박춘서 · 오치림</b> 의 장녀
                 </div>
                 {/* ::after image-background로 전화버튼 삽입 */}
-                <a className="callTo" href="tel:010-2270-6408">
+                <a className="callTo" href="tel:010-2316-7239">
                   <img src={icon_tel} alt="" />
                   신부에게 연락하기
                 </a>
                 <br />
                 {/* TODO: popup 이 뜨면서 복사되었다고 알리기 + 계좌정보 */}
-                <button
-                  className="bankCopy"
-                  data-clipboard-text="국민은행 048402-04-324513 박찬민"
-                  onClick={handleClick}
-                >
-                  신부측에 축의금 보내기
-                </button>
+                <div className="bankCopy-container">
+                  <button
+                    className="bankCopy bride"
+                    data-clipboard-text="국민은행 048402-04-324513 박찬민"
+                    onClick={handleClick}
+                  >
+                    신부측에 축의금 보내기
+                  </button>
+                </div>
                 <div className="fullyCopied" style={{ opacity: displayCss }}>
                   복사되었습니다.
                 </div>

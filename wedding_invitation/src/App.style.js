@@ -133,14 +133,14 @@ export const AppStyle = styled.div`
   @media all and (max-width: 800px) {
   }
   /* 지워야할 임시 CSS */
-  header {
+  /* header {
     display: none;
   }
 
   a,
   button {
     color: yellowgreen;
-  }
+  } */
 
   #Skip_Nav,
   .QuickMenu,

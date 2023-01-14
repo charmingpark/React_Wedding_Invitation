@@ -35,6 +35,7 @@ export const ImageSliderStyle = styled.div`
   .thumbnail-container {
     display: block;
     display: flex;
+    justify-content: center;
   }
 
   .thumbnail,
@@ -43,6 +44,8 @@ export const ImageSliderStyle = styled.div`
     display: block;
     width: calc(95vw / 8); //썸네일 너비
     height: calc(95vw / 8); //썸네일 높이
+    max-width: 50px;
+    max-height: 50px;
   }
   .thumbnail {
     object-fit: cover;
@@ -77,12 +80,16 @@ export const ImageSliderStyle = styled.div`
     font-size: 1rem;
     width: calc(95vw / 8); //썸네일 너비
     height: calc(95vw / 8); //썸네일 높이
+    max-width: 50px;
+    max-height: 50px;
   }
 
   .prev,
   .next {
     width: calc(95vw / 8); //썸네일 너비
     height: calc(95vw / 8); //썸네일 높이
+    max-width: 50px;
+    max-height: 50px;
   }
   .popup-overlay {
     position: fixed;

@@ -49,7 +49,7 @@ export const AboutUsStyle = styled.div`
       right: 8px;
     }
   }
-  button.bankCopy {
+  /* button.bankCopy {
     margin: 1em;
     width: 14em;
     height: 2.8em;
@@ -62,12 +62,19 @@ export const AboutUsStyle = styled.div`
     opacity: 0.8;
     line-height: 1.8em;
     &:after {
-      content: '(클릭하시면 계좌번호가 복사됩니다.)';
       display: block;
       margin-top: -10px;
       font-size: 0.8em;
+      white-space: pre;
     }
-  }
+    &.groom:after {
+      content: '농협NH 301000-72-72481 김동진\A(클릭하시면 계좌번호가 복사됩니다.)';
+    }
+    &.bride:after {
+      content: '국민은행 048402-04-324513 박찬민\A(클릭하시면 계좌번호가 복사됩니다.)';
+    }
+  } */
+  /* content속성에서 줄바꿈 = \A */
   .MuiTab-root.Mui-selected {
     opacity: 1;
   }
