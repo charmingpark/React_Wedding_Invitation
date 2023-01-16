@@ -7,7 +7,7 @@ export const LocationStyle = styled.div`
 
   .map {
     width: 100%;
-    height: 35dvh;
+    height: 35vh;
     background-color: #000;
   }
 

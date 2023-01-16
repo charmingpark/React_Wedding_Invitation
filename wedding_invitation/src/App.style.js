@@ -89,7 +89,7 @@ export const AppStyle = styled.div`
 
   @media not (max-width: 800px) {
     .top {
-      padding: 13dvh 15% 5%;
+      padding: 13vh 15% 5%;
     }
   }
 
@@ -103,12 +103,12 @@ export const AppStyle = styled.div`
     border-radius: 0;
   } */
 
-  @supports (height: 100dvh) {
+  @supports (height: 100vh) {
     section {
-      height: 100dvh;
+      height: 100vh;
     }
   }
-  @supports not (height: 100dvh) {
+  @supports not (height: 100vh) {
     section {
       height: 100vh;
     }
@@ -117,7 +117,7 @@ export const AppStyle = styled.div`
   .secTitleWrap p {
     margin-top: 18px;
     font-size: 1.15em;
-    margin-bottom: 2.5dvh;
+    margin-bottom: 2.5vh;
     line-height: 1.4;
     letter-spacing: 2px;
   }
@@ -154,10 +154,10 @@ export const AppStyle = styled.div`
     .top {
       color: #f1dae0;
     }
-    box-shadow: #f1dae0 0px -50dvh 0px;
+    box-shadow: #f1dae0 0px -50vh 0px;
   }
   section:nth-of-type(2n + 4) {
-    box-shadow: #334357 0px -50dvh 0px;
+    box-shadow: #334357 0px -50vh 0px;
   }
   section:last-child {
     background: url(${flowerBg}) no-repeat bottom/cover;
@@ -165,7 +165,7 @@ export const AppStyle = styled.div`
       color: #9f587d;
     }
     color: #222 !important;
-    box-shadow: #f1dae0 0 20px 55px inset, #f1dae0 0px -50dvh 0px;
+    box-shadow: #f1dae0 0 20px 55px inset, #f1dae0 0px -50vh 0px;
   }
   /* section:nth-last-child(2) {
     background: #f6e5d9;
