@@ -94,7 +94,7 @@ function AboutUs() {
                     data-clipboard-text="농협NH 301000-72-72481 김동진"
                     onClick={handleClick}
                   >
-                    신부측에 축의금 보내기
+                    신랑측에 축의금 보내기
                   </button>
                 </div>
                 <div className="fullyCopied" style={{ opacity: displayCss }}>
