@@ -1,13 +1,8 @@
 import { GreetingStyle } from './Greeting.style.js';
-import { forwardRef } from 'react';
 
-const Greeting = forwardRef((props, ref) => {
+function Greeting() {
   return (
-    <section
-      className="greetingWrap atm"
-      id="greetingWrap"
-      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
-    >
+    <section className="greetingWrap atm" id="greetingWrap">
       <GreetingStyle>
         <div className="secTitleWrap">
           <h2 className="hanTit ranTxt top">인사말</h2>
@@ -41,8 +36,5 @@ const Greeting = forwardRef((props, ref) => {
       </GreetingStyle>
     </section>
   );
-}); //함수 닫는 괄호 잊지 마세요!
-
-Greeting.displayName = 'Greeting';
-
+}
 export default Greeting;

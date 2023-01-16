@@ -1,5 +1,4 @@
 import ImageSlider from '../../components/ImageSlider.js';
-import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 const GalleryInner = styled.div`
@@ -8,12 +7,12 @@ const GalleryInner = styled.div`
   flex-direction: column;
 `;
 
-const Gallery = forwardRef((props, ref) => {
+function Gallery() {
   return (
     <section
       className="galleryWrap atm"
       id="galleryWrap"
-      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+      // ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
     >
       <GalleryInner className="galleryInner">
         <div className="secTitleWrap t1">
@@ -23,8 +22,5 @@ const Gallery = forwardRef((props, ref) => {
       </GalleryInner>
     </section>
   );
-}); //함수 닫는 괄호 잊지 마세요!
-
-Gallery.displayName = 'Gallery';
-
+}
 export default Gallery;

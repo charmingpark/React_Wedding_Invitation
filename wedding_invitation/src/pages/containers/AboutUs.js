@@ -1,4 +1,4 @@
-import { useState, forwardRef } from 'react';
+import { useState } from 'react';
 import TabsUnstyled from '@mui/base/TabsUnstyled';
 import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
@@ -9,7 +9,7 @@ import groom from '../../images/groom.jpg';
 import bride from '../../images/bride.jpg';
 import icon_tel from '../../images/icon_tel_m.png';
 
-const AboutUs = forwardRef((props, ref) => {
+function AboutUs() {
   const [displayCss, setdisplayCss] = useState('0');
   const clipboard = new Clipboard('.bankCopy');
 
@@ -38,7 +38,7 @@ const AboutUs = forwardRef((props, ref) => {
     <section
       className="aboutUs atm"
       id="aboutUs"
-      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+      // ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
     >
       <AboutUsStyle>
         <div className="contactInner">
@@ -131,8 +131,5 @@ const AboutUs = forwardRef((props, ref) => {
       </AboutUsStyle>
     </section>
   );
-}); //함수 닫는 괄호 잊지 마세요!
-
-AboutUs.displayName = 'AboutUs';
-
+}
 export default AboutUs;

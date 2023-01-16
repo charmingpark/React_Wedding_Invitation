@@ -1,9 +1,7 @@
 import { LocationStyle } from './Location.style.js';
 import Clipboard from 'clipboard';
 import KakaoMap from '../../components/KakaoMap.js';
-import { forwardRef } from 'react';
-
-const Location = forwardRef((props, ref) => {
+function Location() {
   const clipboard = new Clipboard('.addrCopy');
   clipboard.on('success', function (e) {
     console.log('Action:', e.action);
@@ -21,7 +19,7 @@ const Location = forwardRef((props, ref) => {
     <section
       className="locationWrap atm"
       id="locationWrap"
-      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+      // ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
     >
       <LocationStyle>
         <div className="locationInner">
@@ -68,8 +66,6 @@ const Location = forwardRef((props, ref) => {
       </LocationStyle>
     </section>
   );
-}); //함수 닫는 괄호 잊지 마세요!
-
-Location.displayName = 'Location';
+}
 
 export default Location;

@@ -1,8 +1,8 @@
-import { useState, forwardRef } from 'react';
+import { useState } from 'react';
 import { CreditStyle } from './Credit.style.js';
 import Kakaolink from '../../components/Kakaolink.js';
 
-const Credit = forwardRef((props, ref) => {
+function Credit() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const handlePopupClose = () => {
     setIsPopupOpen(false);
@@ -16,7 +16,7 @@ const Credit = forwardRef((props, ref) => {
     <section
       className="creditWrap"
       id="creditWrap"
-      ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
+      // ref={(inputEl) => (ref.current[ref.current.length] = inputEl)}
     >
       <CreditStyle>
         <div className="thanksInner secTitleWrap">
@@ -56,9 +56,7 @@ const Credit = forwardRef((props, ref) => {
       </CreditStyle>
     </section>
   );
-}); //함수 닫는 괄호 잊지 마세요!
-
-Credit.displayName = 'Credit';
+}
 
 const Popup = ({ onClose }) => (
   <div className="popup-overlay">
